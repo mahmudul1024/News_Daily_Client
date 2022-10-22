@@ -12,7 +12,7 @@ import BrandCarousal from "../BrandCarousal/BrandCarousal";
 const RightsideNav = () => {
   return (
     <div>
-      <ButtonGroup vertical>
+      <ButtonGroup className="mb-3 shadow" vertical>
         <Button className="mb-2" variant="outline-primary">
           <FaGoogle></FaGoogle> Log In WIth Google
         </Button>{" "}
@@ -25,7 +25,7 @@ const RightsideNav = () => {
         <h5>Find Us On</h5>
 
         <ListGroup className="mb-2" as="ul">
-          <ListGroup.Item as="li" active>
+          <ListGroup.Item as="li">
             {" "}
             <FaFacebook /> Facebook
           </ListGroup.Item>
