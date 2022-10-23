@@ -17,7 +17,7 @@ export const router = createBrowserRouter([
       {
         path: "/",
         element: <Home />,
-        loader: () => fetch("http://localhost:5000/news"),
+        loader: () => fetch("https://news-daily-server.vercel.app/news"),
       },
       { path: "/login", element: <Login /> },
       { path: "/register", element: <Register /> },
@@ -36,7 +36,7 @@ export const router = createBrowserRouter([
         path: "/category/:id",
         element: <Category />,
         loader: ({ params }) =>
-          fetch(`http://localhost:5000/category/${params.id}`),
+          fetch(`https://news-daily-server.vercel.app/category/${params.id}`),
       },
 
       {
@@ -47,7 +47,7 @@ export const router = createBrowserRouter([
           </PrivateRoute>
         ),
         loader: ({ params }) =>
-          fetch(`http://localhost:5000/news/${params.id}`),
+          fetch(`https://news-daily-server.vercel.app/news/${params.id}`),
       },
     ],
   },
