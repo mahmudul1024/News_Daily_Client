@@ -51,9 +51,12 @@ const Header = () => {
               <>
                 {user?.uid ? (
                   <>
-                    <span className="text-white"> {user?.displayName}</span>
+                    <span className="text-white py-2 fw-bold">
+                      {" "}
+                      {user?.displayName}
+                    </span>
                     <Button
-                      className="ms-4"
+                      className="mx-4"
                       variant="light"
                       onClick={handleLogout}
                     >
@@ -61,14 +64,23 @@ const Header = () => {
                     </Button>
                   </>
                 ) : (
-                  <>
-                    <Link to="/login">Login</Link>
-                    <Link to="/register">Register</Link>
-                    <FaUser className="ms-2"></FaUser>
-                  </>
+                  <div className="fw-bold ">
+                    <Link
+                      className="me-2 text-white text-decoration-none "
+                      to="/login"
+                    >
+                      Login
+                    </Link>
+                    <Link
+                      className="me-2 text-white text-decoration-none"
+                      to="/register"
+                    >
+                      Register
+                    </Link>
+                  </div>
                 )}
               </>
-              <Nav.Link eventKey={2} href="">
+              <Link to="/profile" className="py-2">
                 {user?.photoURL ? (
                   <Image
                     style={{ height: "30px", width: "30px" }}
@@ -76,9 +88,9 @@ const Header = () => {
                     src={user.photoURL}
                   ></Image>
                 ) : (
-                  ""
+                  <FaUser className=" ms-2 text-white "></FaUser>
                 )}
-              </Nav.Link>
+              </Link>
             </Nav>
             <div className="d-lg-none">
               <LeftsideNav />
