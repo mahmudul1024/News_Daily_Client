@@ -1,8 +1,8 @@
 import React from "react";
 import Carousel from "react-bootstrap/Carousel";
-import Brand1 from "../../../../Assets/Brands/jaguar.png";
-import Brand2 from "../../../../Assets/Brands/Logo_brand_Adidas.png";
-import Brand3 from "../../../../Assets/Brands/nike.png";
+import Brand1 from "../../../../Assets/Brands/photo1.png";
+import Brand2 from "../../../../Assets/Brands/photo2.jpg";
+import Brand3 from "../../../../Assets/Brands/photo3.jpg";
 
 const BrandCarousal = () => {
   return (
